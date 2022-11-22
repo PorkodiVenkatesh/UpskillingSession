@@ -1,0 +1,205 @@
+employee -> cab request
+
+manager -> approve/ deny cab request
+
+Admin -> assign/allocate a cab for approved request
+
+
+Admin 
+-> add a cab, update a cab details, delete a cab, read/retrive a cab
+-> add a employee, update a employee details, delete a employee, read/retrive employee
+-> add a manager, update a manager details, delete a manager, read/retrive a manager
+-> allocate the cab to the employee
+
+Manager
+-> Login/logout
+-> read their details, update their details
+-> view employess under him/her
+-> view cab requested submitted
+-> approve or deny any cab request
+
+
+Employee
+-> Login/Logout
+-> read their details, update their details
+-> generate a cab request 
+
+
+1. Read it
+2. Core of the project
+3. find out users - who are going to use my app - admin, manager, employee
+4. go thro' what each user can do
+5. Creating a tables
+
+Tables:
+
+1. Admin -> a_id(PK), a_name, a_email, a_password
+2. Manager -> m_id(PK), m_name, m_email, m_password
+3. Employee -> e_id(PK), e_name, e_email, e_password, m_id(Fk)
+4. Cab -> c_number(Pk), c_name, seaters
+5. booking -> b_id(PK), e_id, src, destn, date, time, m_id, approve, c_number
+
+
+Queries
+
+CREATE TABLE  admin(
+a_id INT PRIMARY KEY AUTO_INCREMENT,
+a_name VARCHAR(30) NOT NULL,
+a_email VARCHAR (50) NOT NULL,
+a_password VARCHAR(30) NOT NULL
+);
+
+create table Manager(
+m_id int primary key auto_increment,
+m_name varchar(30) not null,
+m_email varchar(40) not null,
+m_password varchar(20) not null);
+
+CREATE TABLE cab(
+c_number INT PRIMARY KEY AUTO_INCREMENT,
+c_name VARCHAR(50) not null,
+seaters INT not null);
+
+create table Employee(
+e_id int Primary Key auto increment,
+e_name varchar(20) not null,
+e_email varchar(20) not null,
+e_password varchar(20) not null,
+m_id int not null,
+foreign key(m_id) references Manager(m_id));
+
+
+CREATE TABLE booking(
+	b_id INT AUTO_INCREMENT PRIMARY KEY,
+	e_id INT NOT NULL,
+	src VARCHAR(50) NOT NULL,
+	destn VARCHAR(50) NOT NULL,
+	`date` DATE NOT NULL,
+	`time` TIME NOT NULL,
+	m_id INT NOT NULL,
+	approve VARCHAR(10),
+	c_number INT,
+);
+
+Note: if there is an admin in your application, insert it using your sql query
+
+6. project structure your project
+
+JAVA <-> JDBC <-> SQL
+
+DB -> MySQL
+JDBC -> MySQL Connector
+
+Maven Project -> added mysql connector dependency
+
+
+packages/Class/Designpatterns
+
+1. model -> classes representing your table structurces
+
+tables -> clasess
+each row -> an object 
+3 rows  -> 3 objects
+list of rows -> List<Object>
+
+2. create folder resources -> db.properties -> url, username, password
+
+
+3. Establish a connection with a db
+
+Singleton -> single instance thro' out app -> only one connection object then utlize that
+
+for exceuting each functionalites -> queries -> run if there is a connection 
+all quereies -> we don't want to create a seperate objects
+one connection object -> utilize by all queries
+
+How can i do singleton?
+
+a) You have to create an object only if object not create,
+	-> if its created, use the created object
+        -> if object == null, then create else use created object
+
+b) Restrict the object creating in other classess
+   -> making constructor private (this means you can create objects only inside that class)
+
+
+4. DAO Layer what should be dao and what should be in service
+
+dao only handles Crud operation on the tables
+
+MAIN FOCUS WHAT ARE THE CRUD OPERATION PERFORMED ON THE TABLES (BASED ON PROJECT)
+(DONT WORRY WHO IS GOING TO DO IT JUST THINK ABOUT WHAT ARE OPERATION)
+
+RESULT ->  DAO for all tables
+
+Manager Table 
+-> insert into Manager values(" ", "" .) -> added as a row in the table
+	void insertManager(Manager m)
+
+-> select * from Manager where id = 12; -> return a row of table
+ 	Manager findManager(int mId)
+
+-> delete * from Manager where id = 12;
+	void deleteManager(int mId);
+
+-> update Manager set password = hjbdsdsjkv  where id = 12;
+        void updatePassword(String password, int mId)
+
+
+
+Employee Table
+-> insert into Employee values();
+	void insertEmployee(Employee e);
+
+-> delete * from Employee where e_id = 13;
+         void deleteEmployee(int eId);
+
+-> update employee set password = ;ljsvnc where e_id = 13;
+          void updatePassword(String password, int eId)
+
+-> select * from employees where m_id = 12; -> return all employee rows
+          List<Employee> findAllEmployees(int mId);
+
+-> select * from employee where e_id = 13;
+	 Employee findEmployee(int eId);
+
+
+cab table
+
+-> insert into Cab values()
+	void insertCab(Cab c)
+	
+-> delete * from Cab where c_number= 12;
+	void deleteCab(int cNumber);
+
+-> select * from cab;
+	List<Cab> findAllCab();
+
+-> select * from cab where c_number = 12;
+	Cab  findCab(int cNumber);
+
+Booking table
+
+-> insert into booking ( e_id, src, destn, date, time, m_id) values ();
+	void insertBooking(Booking b)
+
+-> update booking set approve = true where b_id = 123;
+	void updateApprove(boolean approve, int bId);
+
+-> update booking set cnumber = 1223 where b_id = 123
+	void updateCabNumber(int cNumber, int bId)
+
+-> select  * from booking where b_id = 123;
+	 Booking findBooking(int bId)
+	  
+
+insert -> insertTableName
+Select * -> findAll
+select where -> find
+delet -> delete
+update ->
+
+
+
+
+
