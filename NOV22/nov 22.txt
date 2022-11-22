@@ -199,6 +199,15 @@ select where -> find
 delet -> delete
 update ->
 
+5. Service layer 
+
+Service -> Think User stories/Responsibiits
+DAO -> Think CRUD Operations on the table
+
+Menu Design
+------------
+
+watch image
 
 
 

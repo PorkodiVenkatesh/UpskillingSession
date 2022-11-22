@@ -29,10 +29,6 @@ public class ConnectionUtil {
 		
 		}
 			
-			if (con != null)
-			{
-				System.out.println("Connected Sucessfully");
-			}
 		
 		return con;
 		

@@ -1,5 +1,7 @@
 package com.org.cabBookingSystem.dao.impl;
 
+import java.util.List;
+
 import com.org.cabBookingSystem.dao.BookingDAO;
 import com.org.cabBookingSystem.models.Booking;
 
@@ -21,6 +23,11 @@ public class BookingDAOImpl implements BookingDAO {
 	}
 
 	public Booking findBooking(int bId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<Booking> findEmployeesByManager(int mId) {
 		// TODO Auto-generated method stub
 		return null;
 	}

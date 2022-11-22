@@ -1,5 +1,7 @@
 package com.org.cabBookingSystem.dao;
 
+import java.util.List;
+
 import com.org.cabBookingSystem.models.Manager;
 
 public interface ManagerDAO {
@@ -15,5 +17,8 @@ public interface ManagerDAO {
 
 	// update Manager set password = hjbdsdsjkv  where id = 12;
 	     void updatePassword(String password, int mId);
+	     
+	     
+	     List<Manager> findAllManager();
 
 }

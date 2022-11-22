@@ -1,5 +1,7 @@
 package com.org.cabBookingSystem.dao;
 
+import java.util.List;
+
 import com.org.cabBookingSystem.models.Booking;
 
 public interface BookingDAO {
@@ -14,5 +16,8 @@ public interface BookingDAO {
 
 // select  * from booking where b_id = 123;
 	 Booking findBooking(int bId);
+	 
+	 
+	 List<Booking> findEmployeesByManager (int mId);
 
 }
