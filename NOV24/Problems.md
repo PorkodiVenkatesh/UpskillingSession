@@ -1,8 +1,8 @@
-### Problems to be solved (Try these problems with collections)
+### Problems to be solved
 
 1. Given a list of integers, find out all the even numbers exist in the list
 2. Given a list of integers, find out all the numbers starting with 1
-3. How to find duplicate elements in a given integers list in java
+3. Given a list remove the duplicate elements in a given integers list in java
 4. Given a list of integers, find the maximum/minimun value element present in it
 5. Given a list of integers, sort all the values present in it
 6. Given a list of integers, sort all the values present in it in descending order
@@ -20,16 +20,14 @@ w -> 1
 e -> 2
 o -> 1
 ```
-8. Reverse the last half
+8. Replace A with @ and revere the string 
 
 ```
-Input: Apple -> length = 5  -> odd -> last half = ple  -> reverse = elp
+Input:  apple
 
-output: Apelp
+output: elpp@
 
-Input: Bank -> length = 4 -> even -> last half = nk -> reverse = kn
-
-output: Bakn
+Expln -> apple -> @pple -> elpp@
 ```
 
 9. Print unique numbers in the list/array
@@ -66,7 +64,7 @@ output: a
 output : i
 ```
 
-6. find first non repeated char in a string
+12. find first non repeated char in a string
 
 ```
 "Java is awesome"
@@ -76,4 +74,40 @@ output: J
 "Im from chennai"
 
 output : f
+```
+
+13. Reverse the last half
+
+```
+Input: Apple -> length = 5  -> odd -> last half = ple  -> reverse = elp
+
+output: Apelp
+
+Input: Bank -> length = 4 -> even -> last half = nk -> reverse = kn
+
+output: Bakn
+```
+
+14. Take a string and print characters in numbers according to alphabet order like example abc=123 and then sum of it.
+
+```
+input : ace 
+output: 9 
+explm = a is 1, c is 3, e is 5, so sum = 1+ 3+ 5 = 9
+
+i/p: vijay
+o/p:  67
+```
+
+15. Remove the character from string if the character next to that is same and then again perform same operation on the resultant string until same strings are together
+
+```
+Input: google
+output: le
+
+expln: google -> ggle -> le
+
+Input: addccae
+output: e
+expln: addccae -> accae -> aae -> e
 ```
