@@ -10,6 +10,9 @@
 
 **Table: Employees(EmpID, EmpName, Department, ProjectName, Salary, City, Gender)   Where 'EmpID'  is the Primary Key**
 
+
+> NOTE: create a table and Insert some dummy rows
+
 1. List the number of employees in each department
 
 2. Select all the Employees whose Salary is between 10000 and 20000
