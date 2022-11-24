@@ -1,7 +1,7 @@
 ### Problems to be solved
 
 1. Given a list of integers, find out all the even numbers exist in the list
-2. Given a list of integers, find out all the numbers with sum as 9
+2. Given a list of integers, find out all the numbers with whose sum of the digits is 9
 ```
 input : [ 9, 34, 18, 56, 54 , 81]
 ouput:  9 , 18, 54, 81
