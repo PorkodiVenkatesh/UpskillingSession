@@ -1,10 +1,14 @@
 ### Problems to be solved
 
 1. Given a list of integers, find out all the even numbers exist in the list
-2. Given a list of integers, find out all the numbers starting with 1
+2. Given a list of integers, find out all the numbers with sum as 9
+```
+input : [ 9, 34, 18, 56, 54 , 81]
+ouput:  9 , 18, 54, 81
+```
 3. Given a list remove the duplicate elements in a given integers list in java
-4. Given a list of integers, find the maximum/minimun value element present in it
-5. Given a list of integers, sort all the values present in it
+4. Given a list of integers, find out all the numbers start with 1
+5. Given a list of integers, sort all the values present in it also find the maximum/minimun value element present in it
 6. Given a list of integers, sort all the values present in it in descending order
 7. Count Characters in the String 
 ```
