@@ -8,8 +8,9 @@
 6. Given a list of integers, sort all the values present in it in descending order
 7. Count Characters in the String 
 ```
-"Java is awesome"
+Input: "Java is awesome"
 
+Output:
 J -> 1
 a -> 3
 v -> 1
