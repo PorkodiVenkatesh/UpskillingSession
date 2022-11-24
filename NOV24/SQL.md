@@ -10,6 +10,9 @@
 
 **Table: Employees(EmpID, EmpName, Department, ProjectName, Salary, City, Gender)   Where 'EmpID'  is the Primary Key**
 
+
+> NOTE: create a table and Insert some dummy rows
+
 1. List the number of employees in each department
 
 2. Select all the Employees whose Salary is between 10000 and 20000
@@ -24,6 +27,6 @@
 
 7. Write a SQL Query to return the minimum salary of employees in each department
 
-8. Write a SQL Query to print the number of employees whose salary is above 10,000"
+8. Write a SQL Query to total number of employees assigned to each project
 
-9. Table A -> Student (sid, sname, courseid)  TableB -> Course (courseid, coursename, creditpoints). write join queries
+9. Table A -> Student (sid, sname, courseid)  TableB -> Course (courseid, coursename, creditpoints). write join queries - inner, outer, left, right
