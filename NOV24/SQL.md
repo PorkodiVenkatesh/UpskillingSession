@@ -29,4 +29,4 @@
 
 8. Write a SQL Query to total number of employees assigned to each project
 
-9. Table A -> Student (sid, sname, courseid)  TableB -> Course (courseid, coursename, creditpoints). write join queries
+9. Table A -> Student (sid, sname, courseid)  TableB -> Course (courseid, coursename, creditpoints). write join queries - inner, outer, left, right
