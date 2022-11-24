@@ -24,7 +24,7 @@ w -> 1
 e -> 2
 o -> 1
 ```
-8. Replace A with @ and revere the string 
+8. Replace A with @ and reverse the string 
 
 ```
 Input:  apple
